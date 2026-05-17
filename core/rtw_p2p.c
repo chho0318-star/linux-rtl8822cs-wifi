@@ -20,7 +20,7 @@
 
 int rtw_p2p_is_channel_list_ok(u8 desired_ch, u8 *ch_list, u8 ch_cnt)
 {
-	int found = 0, i = 0;
+	int found = 0, i = 0;	
 
 	for (i = 0; i < ch_cnt; i++) {
 		if (ch_list[i] == desired_ch) {
@@ -291,6 +291,7 @@ static void issue_p2p_provision_resp(struct wifidirect_info *pwdinfo, u8 *raddr,
 	struct xmit_priv			*pxmitpriv = &(padapter->xmitpriv);
 	struct mlme_ext_priv	*pmlmeext = &(padapter->mlmeextpriv);
 
+	RTW_INFO("[%s]\n", __FUNCTION__);
 
 	pmgntframe = alloc_mgtxmitframe(pxmitpriv);
 	if (pmgntframe == NULL)
