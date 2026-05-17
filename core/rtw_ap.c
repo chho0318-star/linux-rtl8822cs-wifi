@@ -25,6 +25,8 @@ extern unsigned char	WPS_OUI[];
 extern unsigned char	P2P_OUI[];
 extern unsigned char	WFD_OUI[];
 
+#define CONFIG_TEST_NAN
+
 void init_mlme_ap_info(_adapter *padapter)
 {
 	struct mlme_priv *pmlmepriv = &(padapter->mlmepriv);
